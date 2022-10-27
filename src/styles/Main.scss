@@ -1,0 +1,134 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.main {
+    /* Layout */
+    display: flex;
+    
+    @include for-size(phone-only) {
+        height: calc(100% - 125px);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @include for-size(tablet-portrait-up) {
+        height: calc(100% - 125px);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @include for-size(tablet-landscape-up) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //background-color: gray;
+
+    @include for-size(phone-only) {
+        height: 400px;
+        width: fit-content;
+        padding-left: 0;
+    }
+    @include for-size(tablet-portrait-up) {
+        height: 400px;
+        width: fit-content;
+        padding-left: 30px;
+    }
+    @include for-size(tablet-landscape-up) {
+        height: 100%;
+        width: 65%;
+        padding-left: 50px;
+    }
+}
+
+.space {
+    height: 5%;
+    background-color: blue;
+
+    @include for-size(phone-only) {
+        width: 100%;
+        height: 20px;
+    }
+    @include for-size(tablet-portrait-up) {
+        height: 20px;
+        width: 100%;
+    }
+    @include for-size(tablet-landscape-up) {
+        width: 5%;
+    }
+    @include for-size(desktop-up) {
+        width: 10%;
+    }
+}
+
+.projects {
+    position: relative;
+    //background-color: green;
+
+    @include for-size(phone-only) {
+        width: 100%;
+    }
+    @include for-size(tablet-portrait-up) {
+        width: 100%;
+    }
+    @include for-size(tablet-landscape-up) {
+        width: 30%;
+    }
+}
+
+.project-wrapper {
+    padding: 30px 0 0 30px;
+    background-color: $primary-bg-color;
+    position: relative;
+    border-radius: 8px;
+
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-wrapper::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: $border-outer;
+    opacity: 1;
+    border-top-left-radius: 8px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+}
+
+.project-item {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 25px;
+    text-align: left;
+    width: fit-content;
+}
+
+.project-name {
+    color: $text-color;
+    font-family: $font;
+    font-size: medium;
+    padding-bottom: 5px;
+    text-decoration: none;
+    border-image: $border-horizontal;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    transition: letter-spacing 0.5s, text-shadow 0.5s, border-image 0.5s;
+}
+
+.project-name:hover {
+    letter-spacing: 1px;
+    text-shadow:
+    -.1px -.1px 0 $text-color,
+    .1px -.1px 0 $text-color,
+    -.1px .1px 0 $text-color,
+    .1px .1px 0 $text-color;
+    border-image: $border-horizontal-inv;
+}

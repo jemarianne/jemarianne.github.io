@@ -1,0 +1,96 @@
+@import "mixins.scss";
+
+.test {
+  animation: glow 2500ms linear infinite 2000ms;
+  @keyframes glow {
+      40% {
+      text-shadow: 0 0 20px white;
+      }
+  }
+}
+
+.test-reveal {
+  animation: reveal 3000ms ease-in-out forwards 200ms;
+  @keyframes reveal {
+      80%{
+      letter-spacing: 3px;
+      }
+      100% {
+      background-size: 300% 300%;
+      }
+  }
+}
+
+header {
+  // background-color: red;
+  height: fit-content;
+
+  /* Layout */
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  /* Layout */
+  display: flex;
+  flex-wrap: wrap;
+
+  @include for-size(phone-only) {
+    height: 50px;
+    width: 50px;
+  }
+  @include for-size(tablet-portrait-up) {
+    height: 60px;
+    width: 60px;
+  }
+  @include for-size(tablet-landscape-up) {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+.site-logo {
+  max-height: 100%;
+  max-width: 100%;
+  filter: grayscale(90%);
+}
+
+.site-logo {
+  transition: all .3s ease-in-out;
+}
+
+.site-logo:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.links {
+  background-color: blue;
+  height: inherit;
+  width: 300px;
+}
+
+ul {
+  margin: 0;
+}
+
+ul li{
+  list-style-type: none;
+  margin-left: 10px;
+
+  display: inline-block;
+}
+
+.contact-logo {
+  color: gray;
+  font-size: 25px;
+}
+
+.contact-logo {
+  transition: all .3s ease-in-out;
+}
+
+.contact-logo:hover {
+  color: whitesmoke;
+  transform: scale(1.2);
+}

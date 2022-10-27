@@ -1,0 +1,118 @@
+@import "./ProjectItem.scss";
+
+.outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //background-color: darkblue;
+    height: 80%;
+    width: 100%;
+}
+
+.outer,
+.outer::after {
+	animation-delay: var(--animation-delay, 2s);
+	animation-iteration-count: var(--iterations, 1);
+	animation-duration: var(--duration, 800ms);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.outer {
+    --animation-delay: var(--delay, 0);
+	--animation-duration: var(--duration, 800ms);
+	--animation-iterations: var(--iterations, 1);
+	position: relative;
+	animation-name: clip-text2;
+	cursor: default;
+
+    @keyframes clip-text2 {
+        from {
+            clip-path: inset(0 100% 0 0);
+        }
+        to {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+	
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $text-color;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: text-revealer2;
+	}
+
+    @keyframes text-revealer2 {
+        0%, 50% {
+            transform-origin: 0 50%;
+        }
+        60%, 100% {
+            transform-origin: 100% 50%;		
+        }
+        60% {
+            transform: scaleX(1);
+        }
+        100% {
+            transform: scaleX(0);
+        }
+    }	
+}
+
+
+.inner {
+    @extend .project-item-main;
+    //background-color: red;
+}
+
+.welcome {
+    padding: 20px 0;
+    background: 50% 100% / 50% 100% no-repeat $text-color;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 8vw;
+    animation: glow 2500ms linear infinite 2000ms;
+
+    // @keyframes reveal {
+    //     80%{
+    //     letter-spacing: 3px;
+    //     }
+    //     100% {
+    //     background-size: 300% 300%;
+    //     }
+    // }
+    @keyframes glow {
+        40% {
+        text-shadow: 0 0 8px white;
+        }
+    }
+}
+
+.welcome-reveal {
+    animation: reveal 3000ms ease-in-out forwards 200ms;
+    @keyframes reveal {
+        80%{
+        letter-spacing: 3px;
+        }
+        100% {
+        background-size: 300% 300%;
+        }
+    }
+}
+
+.summary{
+    padding-left: 30px;
+    line-height: 1.6;
+
+    border-image: $border-vertical;
+    border-left-width: 2px;
+    border-left-style: solid;
+}

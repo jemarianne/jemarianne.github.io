@@ -1,0 +1,15 @@
+$primary-bg-color: #1d1d20;
+$text-color: #cbcbcb;
+$font: 'Montserrat', sans-serif;
+
+/* Border Colors */
+$border1: rgb(random(255), random(255), random(255));
+$border2: rgb(random(255), random(255), random(255));
+// $border1: blue;
+// $border2: aqua;
+
+/* Border Gradients */
+$border-outer: linear-gradient(135deg, $border1, $border2, $border1);
+$border-vertical: linear-gradient($border1, $border2) 20;
+$border-horizontal: linear-gradient(90deg, $border1, $border2) 20;
+$border-horizontal-inv: linear-gradient(90deg, $border2, $border1) 20;

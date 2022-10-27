@@ -1,0 +1,117 @@
+@import "Main.scss";
+
+.about {
+    padding-left: 30px;
+    line-height: 1.6;
+
+    border-image: $border-vertical;
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+.project-item-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //background-color: darkblue;
+    height: 80%;
+    width: 100%;
+}
+
+.project-item-main {
+    width: 100%;
+    //background-color: blue;
+}
+
+/* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
+:root {
+	--delay: 0;
+	--duration: 800ms;
+	--iterations: 1;
+}
+
+.project-item-outer,
+.project-item-outer::after {
+	animation-delay: var(--animation-delay, 2s);
+	animation-iteration-count: var(--iterations, 1);
+	animation-duration: var(--duration, 800ms);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.project-item-outer {
+    --animation-delay: var(--delay, 0);
+	--animation-duration: var(--duration, 800ms);
+	--animation-iterations: var(--iterations, 1);
+	position: relative;
+	animation-name: clip-text;
+	cursor: default;
+
+    @keyframes clip-text {
+        from {
+            clip-path: inset(0 0 0 100%);
+        }
+        to {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+	
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $text-color;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: text-revealer;
+
+        @keyframes text-revealer {
+            0%, 50% {
+                transform-origin: 100% 50%;
+            }
+            60%, 100% {
+                transform-origin: 0 50%;		
+            }
+            60% {
+                transform: scaleX(1);
+            }
+            100% {
+                transform: scaleX(0);
+            }
+        }
+	}
+	
+}
+
+/* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
+
+.project-link {
+//     font-family: $font;
+    text-decoration: none;
+//     background-color: transparent;
+//     padding-bottom: 5px;
+//     width: fit-content;
+
+//     border-image: $border-horizontal;
+//     border-bottom-width: 2px;
+//     border-bottom-style: solid;
+//     border-top-width: 0;
+}
+
+.view {
+    @extend .project-name;
+    
+    border-top-width: 0;
+    border-style: solid;
+    //padding-bottom: 1px;
+
+    &:hover {
+        @extend .project-name:hover;
+        letter-spacing: 0;
+    }
+}
