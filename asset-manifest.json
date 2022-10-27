@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/jemarianne.github.io/static/css/main.a57642cf.css",
-    "main.js": "/jemarianne.github.io/static/js/main.202c1b91.js",
-    "static/media/logo.png": "/jemarianne.github.io/static/media/logo.ff91fac290c461626cff.png",
-    "index.html": "/jemarianne.github.io/index.html",
-    "main.a57642cf.css.map": "/jemarianne.github.io/static/css/main.a57642cf.css.map",
-    "main.202c1b91.js.map": "/jemarianne.github.io/static/js/main.202c1b91.js.map"
+    "main.css": "/static/css/main.1bfa5b11.css",
+    "main.js": "/static/js/main.65cc1e2f.js",
+    "static/media/logo.png": "/static/media/logo.ff91fac290c461626cff.png",
+    "index.html": "/index.html",
+    "main.1bfa5b11.css.map": "/static/css/main.1bfa5b11.css.map",
+    "main.65cc1e2f.js.map": "/static/js/main.65cc1e2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.a57642cf.css",
-    "static/js/main.202c1b91.js"
+    "static/css/main.1bfa5b11.css",
+    "static/js/main.65cc1e2f.js"
   ]
 }
