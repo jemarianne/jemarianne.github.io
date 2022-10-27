@@ -19,21 +19,6 @@ import "../styles/Summary.scss";
 // }
 
 class Summary extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            animate: false
-        };
-    }
-
-    componentDidMount(){
-        window.onbeforeunload = function() {
-            this.setState({
-                animate: true
-            })
-        };
-    }
-
     render() {
         return (
             <div className="outer">
