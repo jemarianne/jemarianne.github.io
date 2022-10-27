@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/jemarianne.github.io/static/css/main.3df8daeb.css",
-    "main.js": "/jemarianne.github.io/static/js/main.7efe7464.js",
-    "static/media/logo.png": "/jemarianne.github.io/static/media/logo.ff91fac290c461626cff.png",
-    "index.html": "/jemarianne.github.io/index.html",
-    "main.3df8daeb.css.map": "/jemarianne.github.io/static/css/main.3df8daeb.css.map",
-    "main.7efe7464.js.map": "/jemarianne.github.io/static/js/main.7efe7464.js.map"
+    "main.css": "/hatdog/static/css/main.0cfc27e4.css",
+    "main.js": "/hatdog/static/js/main.18284a65.js",
+    "static/media/logo.png": "/hatdog/static/media/logo.ff91fac290c461626cff.png",
+    "index.html": "/hatdog/index.html",
+    "main.0cfc27e4.css.map": "/hatdog/static/css/main.0cfc27e4.css.map",
+    "main.18284a65.js.map": "/hatdog/static/js/main.18284a65.js.map"
   },
   "entrypoints": [
-    "static/css/main.3df8daeb.css",
-    "static/js/main.7efe7464.js"
+    "static/css/main.0cfc27e4.css",
+    "static/js/main.18284a65.js"
   ]
 }
