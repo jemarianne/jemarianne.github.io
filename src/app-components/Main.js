@@ -64,7 +64,7 @@ class Main extends Component {
                         </button>
                         <button className="project-item" 
                         onClick={ () => this.updateContent(2, "The Food Place",
-                        "The Food Place is a crowdsourcing web-based application where users can search nearby restaurants (around Metro Manila) with the help of GPS integrated with Google Maps. It can also locate restaurants wherein seniors and/or kids are allowed with hassle free. The user can get information like where it is, what it is, on-going event info and etc.",
+                        "The Food Place is a crowdsourcing web-based application where users can search nearby restaurants (around Metro Manila) with the help of GPS integrated with Google Maps. It can also locate restaurants wherein seniors and/or kids are allowed and can get information like where it is, what it is, on-going event info and etc.",
                         "https://drive.google.com/drive/folders/1hZZcR2Lt29OTBbxK_7xS7zF1SuLAg8JE?usp=sharing") }>
                             <span className="project-name">The Food Place</span>
                         </button>

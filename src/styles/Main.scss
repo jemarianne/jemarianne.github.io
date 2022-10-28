@@ -26,9 +26,13 @@
     flex-direction: column;
     justify-content: center;
     //background-color: gray;
-
+    
+    // @include for-size(phone-down) {
+    //     height: 100px;
+    //     width: fit-content;
+    // }
     @include for-size(phone-only) {
-        height: 400px;
+        height: fit-content;
         width: fit-content;
         padding-left: 0;
     }
@@ -46,7 +50,7 @@
 
 .space {
     height: 5%;
-    background-color: blue;
+    //background-color: blue;
 
     @include for-size(phone-only) {
         width: 100%;

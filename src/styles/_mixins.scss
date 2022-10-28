@@ -1,4 +1,7 @@
 @mixin for-size($size) {
+    @if $size == phone-down {
+      @media (max-width: 380px) { @content; }
+    } 
     @if $size == phone-only {
       @media (max-width: 599px) { @content; }
     } 
