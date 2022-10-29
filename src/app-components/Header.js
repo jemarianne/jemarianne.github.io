@@ -63,6 +63,14 @@ class Header extends Component {
                                 <Facebook className="contact-logo"/>
                             </a>
                         </li>
+                        <li>
+                            <a className="resume-btn"
+                            href="/resume.pdf"
+                            // download="SALVACION_JEM.pdf"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            >Resume</a>
+                        </li>
                     </ul>
                 </div>
             </header>
