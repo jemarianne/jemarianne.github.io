@@ -1,28 +1,7 @@
 @import "mixins.scss";
-
-.test {
-  animation: glow 2500ms linear infinite 2000ms;
-  @keyframes glow {
-      40% {
-      text-shadow: 0 0 20px white;
-      }
-  }
-}
-
-.test-reveal {
-  animation: reveal 3000ms ease-in-out forwards 200ms;
-  @keyframes reveal {
-      80%{
-      letter-spacing: 3px;
-      }
-      100% {
-      background-size: 300% 300%;
-      }
-  }
-}
+@import "variables.scss";
 
 header {
-  // background-color: red;
   height: fit-content;
 
   /* Layout */
@@ -32,8 +11,8 @@ header {
 
 .logo {
   /* Layout */
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  //flex-wrap: wrap;
 
   @include for-size(phone-only) {
     height: 50px;
@@ -52,33 +31,22 @@ header {
 .site-logo {
   max-height: 100%;
   max-width: 100%;
-  filter: grayscale(90%);
-}
-
-.site-logo {
+  
   transition: all .3s ease-in-out;
 }
 
 .site-logo:hover {
-  filter: grayscale(0);
   transform: scale(1.1);
 }
 
-.links {
-  background-color: blue;
-  height: inherit;
-  width: 300px;
-}
-
 ul {
-  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
-ul li{
+li{
   list-style-type: none;
   margin-left: 10px;
-
-  display: inline-block;
 }
 
 .contact-logo {
@@ -93,4 +61,23 @@ ul li{
 .contact-logo:hover {
   color: whitesmoke;
   transform: scale(1.2);
+}
+
+.resume-btn {
+  text-decoration: none;
+  color: $text-color;
+  padding: 3px 5px;
+  margin-bottom: 0;
+  border: 1px solid $text-color;
+  border-radius: 6px;
+  transition: background-color 1s;
+
+  display: flex;
+  justify-content: center;
+}
+
+.resume-btn:hover {
+  background-color: $text-color;
+  color: $primary-bg-color;
+  font-weight: bolder;
 }

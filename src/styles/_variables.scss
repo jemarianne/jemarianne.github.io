@@ -3,10 +3,10 @@ $text-color: #cbcbcb;
 $font: 'Montserrat', sans-serif;
 
 /* Border Colors */
-$border1: rgb(random(255), random(255), random(255));
-$border2: rgb(random(255), random(255), random(255));
-// $border1: blue;
-// $border2: aqua;
+// $border1: rgb(random(255), random(255), random(255));
+// $border2: rgb(random(255), random(255), random(255));
+$border1: #064273;
+$border2: #259faf;
 
 /* Border Gradients */
 $border-outer: linear-gradient(135deg, $border1, $border2, $border1);

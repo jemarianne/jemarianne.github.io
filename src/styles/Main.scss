@@ -27,12 +27,8 @@
     justify-content: center;
     //background-color: gray;
     
-    // @include for-size(phone-down) {
-    //     height: 100px;
-    //     width: fit-content;
-    // }
     @include for-size(phone-only) {
-        height: fit-content;
+        height: 450px;
         width: fit-content;
         padding-left: 0;
     }
